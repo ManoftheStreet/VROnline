@@ -43,6 +43,15 @@ public class RoomManager : MonoBehaviourPunCallbacks
         Debug.Log("The Local player:  " + PhotonNetwork.NickName
                           + " joined to " + PhotonNetwork.CurrentRoom.Name
                           + " Player count " + PhotonNetwork.CurrentRoom.PlayerCount);
+
+        if (PhotonNetwork.CurrentRoom.CustomProperties.ContainsKey(MultiplayerVRConstants.MAP_TYPE_KEY))//customPoomProperties 가있다면
+        {
+            object mapType;//이건 뭐야?
+            if(PhotonNetwork.CurrentRoom.CustomProperties.TryGetValue(MultiplayerVRConstants.MAP_TYPE_KEY, out mapType))//maptype 이 있다면
+            {
+                Debug.Log("Joined room with the map: " + mapType);//map type 출력
+            }
+        }
     }
 
     public override void OnPlayerEnteredRoom(Player newPlayer)
@@ -54,11 +63,21 @@ public class RoomManager : MonoBehaviourPunCallbacks
     #region Private Methods
     private void CreateAndJoinRoom()
     {
-        string randomRoomName = "Room_" + Random.Range(0, 10000);
-        RoomOptions roomOptions = new RoomOptions();
-        roomOptions.MaxPlayers = 20;
+        string randomRoomName = "Room_" + Random.Range(0, 10000);//랜덤한 방이름
+        RoomOptions roomOptions = new RoomOptions();//룸옵션 생성
+        roomOptions.MaxPlayers = 20;//최대 인원설정
 
-        PhotonNetwork.CreateRoom(randomRoomName,roomOptions);
+        string[] roomPropsInLobby = { MultiplayerVRConstants.MAP_TYPE_KEY };
+        //MultiplayerVRConstants.MAP_TYPE_KEY 의 문장을 출력하는 변수roomPropsInLobby를 선언
+
+        ExitGames.Client.Photon.Hashtable customPoomProperties = new ExitGames.Client.Photon.Hashtable() 
+                        { {MultiplayerVRConstants.MAP_TYPE_KEY, MultiplayerVRConstants.MAP_TYPE_VALUE_SCHOOL} };
+        //포톤 해쉬테이블 만드는데 new ExitGames.Client.Photon.Hashtable() { { MultiplayerVRConstants.MAP_TYPE_KEY, MultiplayerVRConstants.MAP_TYPE_VALUE_SCHOOL} };가 뭘 의미하는지 모르겠음
+
+        roomOptions.CustomRoomPropertiesForLobby = roomPropsInLobby;//CustomRoomPropertiesForLobby 이게 무슨기능을 하는지 모르겠음
+        roomOptions.CustomRoomProperties = customPoomProperties;//CustomRoomProperties 얘도 모르겠어
+
+        PhotonNetwork.CreateRoom(randomRoomName,roomOptions);//설정한 방이름과 옵션을 가진 방이 만들어짐
     }
 
 
