@@ -6,6 +6,7 @@ using Photon.Realtime;
 
 public class RoomManager : MonoBehaviourPunCallbacks
 {
+    private string mapType;
 
     void Start()
     {
@@ -23,6 +24,20 @@ public class RoomManager : MonoBehaviourPunCallbacks
         PhotonNetwork.JoinRandomRoom();
     }
 
+    public void OnEnterButtonClicked_Outdoor()
+    {
+        mapType = MultiplayerVRConstants.MAP_TYPE_VALUE_OUTDOOR;
+        ExitGames.Client.Photon.Hashtable expectedCustomRoomProperties = new ExitGames.Client.Photon.Hashtable() { { MultiplayerVRConstants.MAP_TYPE_KEY, mapType } };
+        PhotonNetwork.JoinRandomRoom(expectedCustomRoomProperties, 0);
+    }
+
+    public void OnEnterButtonClicked_School()
+    {
+        mapType = MultiplayerVRConstants.MAP_TYPE_VALUE_SCHOOL;
+        ExitGames.Client.Photon.Hashtable expectedCustomRoomProperties = new ExitGames.Client.Photon.Hashtable() { { MultiplayerVRConstants.MAP_TYPE_KEY,mapType} };
+        PhotonNetwork.JoinRandomRoom(expectedCustomRoomProperties,0);
+    
+    }
 
     #endregion
 
@@ -71,7 +86,7 @@ public class RoomManager : MonoBehaviourPunCallbacks
         //MultiplayerVRConstants.MAP_TYPE_KEY 의 문장을 출력하는 변수roomPropsInLobby를 선언
 
         ExitGames.Client.Photon.Hashtable customPoomProperties = new ExitGames.Client.Photon.Hashtable() 
-                        { {MultiplayerVRConstants.MAP_TYPE_KEY, MultiplayerVRConstants.MAP_TYPE_VALUE_SCHOOL} };
+                        { {MultiplayerVRConstants.MAP_TYPE_KEY, mapType} };
         //포톤 해쉬테이블 만드는데 new ExitGames.Client.Photon.Hashtable() { { MultiplayerVRConstants.MAP_TYPE_KEY, MultiplayerVRConstants.MAP_TYPE_VALUE_SCHOOL} };가 뭘 의미하는지 모르겠음
 
         roomOptions.CustomRoomPropertiesForLobby = roomPropsInLobby;//CustomRoomPropertiesForLobby 이게 무슨기능을 하는지 모르겠음

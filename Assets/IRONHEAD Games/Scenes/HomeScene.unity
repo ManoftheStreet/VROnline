@@ -2279,6 +2279,18 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3353666616921926523, guid: 6d8e6081db12265499563e00acf53acc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 626182412}
+    - target: {fileID: 3353666616921926523, guid: 6d8e6081db12265499563e00acf53acc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnEnterButtonClicked_Outdoor
+      objectReference: {fileID: 0}
+    - target: {fileID: 3353666616921926523, guid: 6d8e6081db12265499563e00acf53acc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RoomManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3353666617062148212, guid: 6d8e6081db12265499563e00acf53acc, type: 3}
       propertyPath: m_Layer
       value: 5
@@ -2326,6 +2338,18 @@ PrefabInstance:
     - target: {fileID: 3353666617230840612, guid: 6d8e6081db12265499563e00acf53acc, type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3353666617230840614, guid: 6d8e6081db12265499563e00acf53acc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 626182412}
+    - target: {fileID: 3353666617230840614, guid: 6d8e6081db12265499563e00acf53acc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: OnEnterButtonClicked_School
+      objectReference: {fileID: 0}
+    - target: {fileID: 3353666617230840614, guid: 6d8e6081db12265499563e00acf53acc, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: RoomManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 3353666617269073606, guid: 6d8e6081db12265499563e00acf53acc, type: 3}
       propertyPath: m_Layer
@@ -2427,6 +2451,22 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 3353666618151478680, guid: 6d8e6081db12265499563e00acf53acc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3353666618151478680, guid: 6d8e6081db12265499563e00acf53acc, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3353666618151478680, guid: 6d8e6081db12265499563e00acf53acc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3353666618151478680, guid: 6d8e6081db12265499563e00acf53acc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3353666618156345472, guid: 6d8e6081db12265499563e00acf53acc, type: 3}
       propertyPath: m_textAlignment
       value: 65535
@@ -2450,6 +2490,22 @@ PrefabInstance:
     - target: {fileID: 3353666618244272507, guid: 6d8e6081db12265499563e00acf53acc, type: 3}
       propertyPath: m_Layer
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3353666618244272508, guid: 6d8e6081db12265499563e00acf53acc, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3353666618244272508, guid: 6d8e6081db12265499563e00acf53acc, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3353666618244272508, guid: 6d8e6081db12265499563e00acf53acc, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3353666618244272508, guid: 6d8e6081db12265499563e00acf53acc, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
